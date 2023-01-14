@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback</title>
+</head>
+
+<body class="body1">
+    <header>
+        <a href="index.html">To main</a>
+        <h1>Feedback</h1>
+    </header>
+    <main>
+        
+
+        <form method="POST" action="http://httpbin.org/post" enctype="multipart/form-data" class="form1">
+            <div class="marg">
+                <label for="fio">Your name</label>
+                <input type="text" name="fio" id="fio" placeholder="enter your name" required>
+            </div>
+
+            <div class="marg">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <fieldset class="marg">
+                <legend class="marg">How did you know about us?</legend>
+                <div>
+                    <input type="radio" id="friends" name="source" value="friends">
+                    <label for="friends">Friends told me</label>
+                </div>
+
+                <div>                    
+                    <input type="radio" id="internet" name="source" value="internet">
+                    <label for="internet">From the Internet</label>
+                </div>
+
+            </fieldset>
+            <div class="marg">
+                <label for="category">Category of appeal</label>
+                <select name="category" id="category" multiple required>
+                    <option value="1">Сomplaintа</option>
+                    <option value="2">Offers</option>
+                </select>
+            </div>
+            <div class="marg">
+                <label for="msg">Message text</label>
+                <textarea name="msg" id="msg" cols="30" rows="10" placeholder="enter your text" required></textarea>
+            </div>
+            <div class="marg">
+                <input type="checkbox" name="agreement" id="agreement" value="true" required>
+                <label for="agreement">I agree with the data processing</label>
+            </div>
+
+            <div class="marg">
+                <input type="file" name="attachment" id="attachment">
+                <label for="attachment">Attachments</label>
+            </div>
+
+            <button type="submit">Send</button>
+
+        </form>
+    </main>
+</body>
+
+</html>
